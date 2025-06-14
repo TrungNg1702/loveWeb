@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tèn ten, đây là cái web anh làm vui vui cho em vào nghịch, trong này có mấy cái hay hay đó, em thử nhé ^^! ✨
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container game-page">
+        <h1 id="welcome-message">Chào Mừng Em, Embe Tomi Của Anh!</h1>
+        <p class="instruction-text">Hãy chọn một trò chơi để bắt đầu nhé!</p>
+
+        <div class="game-grid">
+            <div class="game-card" id="game1">
+                <img src="images/game1_icon.png" alt="Game Icon 1">
+                <h3>Trò Chơi 1: Câu Đố Tình Yêu</h3>
+                <p>Xem em co bic gi hok neo!</p>
+                <button>Bắt Đầu!</button>
+            </div>
+
+            <div class="game-card" id="game2">
+                <img src="images/game2_icon.png" alt="Game Icon 2">
+                <h3>Trò Chơi 2: Thử Thách Vui Nhộn</h3>
+                <p>Mấy cái "sự thật" bá đạo đang chờ em nè!</p>
+                <button>Bắt Đầu!</button>
+            </div>
+
+            <div class="game-card" id="game3">
+                <img src="images/game3_icon.png" alt="Game Icon 3">
+                <h3>Trò Chơi 3: Lá Thư Bí Mật</h3>
+                <p>Một lá thư nhỏ đang chờ em mở ra...</p>
+                <button>Bắt Đầu!</button>
+            </div>
+        </div>
+
+        <div id="quiz-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2>Câu Đố Tình Yêu ❤️</h2>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-answer" placeholder="Câu trả lời của em là gì?">
+                <button id="check-answer-btn">Kiểm Tra</button>
+                <p id="quiz-feedback" class="feedback-text"></p>
+                <button id="next-question-btn" class="hidden">Câu Kế Tiếp</button>
+                <button id="close-quiz-btn" class="close-btn">Đóng</button>
+            </div>
+        </div>
+
+        <div id="challenge-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2>Thử Thách Vui Nhộn Của Anh 🤣</h2>
+                <p class="instruction-text" id="challenge-instruction">Em đã sẵn sàng đối mặt với những thử thách
+                    "khó nhằn" này chưa? Nhấn "Bắt Đầu" nào!</p>
+
+                <div id="challenge-area">
+                    <button id="start-challenge-btn">Bắt Đầu!</button>
+
+                    <div id="quiz-question-area" class="hidden">
+                        <p id="challenge-question"></p>
+                        <input type="text" id="challenge-answer" placeholder="Câu trả lời bá đạo của em là gì?">
+                        <button id="check-challenge-btn">Kiểm Tra</button>
+                        <p id="challenge-feedback" class="feedback-text"></p>
+                        <button id="next-challenge-btn" class="hidden">Thử Thách Tiếp Theo</button>
+                    </div>
+
+                    <div id="final-revelation" class="hidden">
+                        <h3>Em Đã Vượt Qua Xuất Sắc!</h3>
+                        <p class="revelation-text">Và đây là sự thật cuối cùng về anh mà có thể em chưa biết (hoặc
+                            biết rồi nhưng giả vờ không biết):</p>
+                        <p class="revelation-detail">"Anh thật sự đã giả ngu ngu để em được tỏa sáng nhưng mà em không thích nên anh tòan làm em bực, anh xin lỗiiiii!"</p>
+                        <img src="images/funny_gif.gif" alt="Funny gif" class="gif-img-challenge">
+                        <p class="revelation-signature">Tới đây thôi nha, bai!</p>
+                    </div>
+                </div>
+
+                <button id="close-challenge-btn" class="close-btn">Đóng</button>
+            </div>
+        </div>
+
+        <div id="letter-popup" class="popup hidden">
+            <div class="popup-content">
+                <h2>Lá Thư Bí Mật Của Anh 💌</h2>
+                <p class="letter-text">
+                    Gửi em, tình yêu bé nhỏ của anh,<br><br>
+                    Anh biết em đã rất cố gắng để "đăng nhập" vào đây, đúng không? Chắc em đang cười tủm tỉm rồi. <br>
+                    Thì mục đích anh ngồi làm cái dở hơi này để khiến em bất ngờ mà keke :> Mấy ngày hôm nay tâm trạng của em có vẻ hơi tệ nhỉ. Phần lớn là do anh ha, anh cảm thấy rất có lỗi. Hmmm, phần có lỗi anh cảm nhận được nó lớn nhưng anh nghĩ nó không lớn bằng phần sợ đánh mất em trong đời anh lúc này. Dù biết em đã phải trải qua 1 quá khứ với kỉ niệm k tốt đẹp gì về tình yêu, biết rất rõ điều đấy nhưng anh chưa thực sự làm được việc mà anh muốn, chính là bảo vệ và hồi sinh lại trái tim vụn vỡ của em! Anh xin lỗi và cũng muốn nói 1 điều là: Đây sẽ là cơ hội cuối cùng của anh, anh sẽ không đánh mất em đâu :* Hôm qua anh viết lá thư tay rồi thì hôm nay anh viết lá thứ web nhé :> ANH KHẲNG ĐỊNH MẤY TH LOZ NYC CỦA EM ĐÉO AI LÀM ĐƯỢC NHƯ NÀY ĐÂU. Nên anh vẫn là người đầu tiên ha :> Anh yêu em lắm, anh sẽ không làm em phải tửi thân thêm một lần nào nữa đâu. EM TIN ANH LẦN CUỐI NHÉ <br><br>
+                    Cảm ơn em vì đã đến bên anh, vì đã làm cuộc sống của anh tràn ngập niềm vui và hạnh phúc. Hãy cứ là
+                    chính em, và đừng bao giờ quên rằng anh luôn ở đây, yêu em vô điều kiện.<br><br>
+                    Mãi yêu em,<br>
+                    Ebe của Tomi ❤️
+                </p>
+                <button id="close-letter-btn" class="close-btn">Đóng</button>
+            </div>
+        </div>
+
+        <p class="footer-text">Chúc em có những giây phút thật vui vẻ! ❤️</p>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="audio/bg_music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+
+    <script src="home_script.js"></script>
+</body>
+
+</html>

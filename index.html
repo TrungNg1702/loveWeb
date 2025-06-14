@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tèn ten, đây là cái web anh làm vui vui cho em vào nghịch, trong này có mấy cái hay hay đó, em thử nhé ^^! ✨
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="first-question-container" class="first-question-container">
+        <h2 class="question-text">Em có yêu anh không?</h2>
+        <div class="buttons-group">
+            <button id="yes-button" class="action-button">Có</button>
+            <button id="no-button" class="action-button">Không</button>
+        </div>
+        <p id="love-message" class="love-message hidden">Anh yêu em! ❤️</p>
+    </div>
+
+    <div class="login-container">
+        <h1>Chào Mừng Công Chúa Của Anh! 💖</h1>
+        <p class="instruction-text">Hãy nhập mật khẩu bí mật để vào thế giới của chúng ta nhé!</p>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Tài khoản:</label>
+                <input type="text" id="username" placeholder="Ngay dau anh voi em gap nhau la ngay bao nhieu thang may ne?">
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" placeholder="Ngay sinh nhat cua em voi anh nhe ^^ ">
+            </div>
+            <button type="submit" id="login-button">Đăng Nhập</button>
+            <p id="error-message" class="error-text hidden"></p>
+        </form>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="audio/bg_music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
