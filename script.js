@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let hasInteracted = false;
 
     // --- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN ---
-    backgroundMusic.volume = 0.3; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
+    backgroundMusic.volume = 0.19; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
 
     // Hiệu ứng bong bóng nền
     function createBubbles() {

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundMusic = document.getElementById('background-music');
     
     // --- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN ---
-    backgroundMusic.volume = 0.3; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
+    backgroundMusic.volume = 0.19; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
 
     // Luôn cố gắng phát nhạc khi trang home.html được tải, do người dùng đã tương tác ở trang trước
     backgroundMusic.play().catch(error => {
