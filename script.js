@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundMusic = document.getElementById('background-music');
     let hasInteracted = false;
 
+    // --- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN ---
+    backgroundMusic.volume = 0.3; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
+
     // Hiệu ứng bong bóng nền
     function createBubbles() {
         const numBubbles = 15;
@@ -69,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
 
     // Thay đổi thông tin đăng nhập tại đây
-    const correctUsername = "18052025"; // Ngày sinh của bạn và người yêu (DDMMYYYY)
-    const correctPassword = "16051702"; // Ngày sinh của người yêu (DDMMYYYY)
+    const correctUsername = "18052025"; // Ngày sinh của bạn (hoặc bất kỳ thông tin nào bạn muốn)
+    const correctPassword = "16051702"; // Ngày sinh của người yêu (hoặc bất kỳ thông tin nào bạn muốn)
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Ngăn chặn form gửi đi mặc định

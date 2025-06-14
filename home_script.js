@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     createBubbles();
 
     const backgroundMusic = document.getElementById('background-music');
+    
+    // --- ĐIỀU CHỈNH ÂM LƯỢNG NHẠC NỀN ---
+    backgroundMusic.volume = 0.3; // Đặt âm lượng ở mức 30% (giá trị từ 0.0 đến 1.0)
+
     // Luôn cố gắng phát nhạc khi trang home.html được tải, do người dùng đã tương tác ở trang trước
     backgroundMusic.play().catch(error => {
         console.log("Auto-play prevented on home page.");
@@ -36,15 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             question: "Biệt danh đáng yêu mà anh hay gọi em là gì?",
-            answer: "Bé yêu"
+            answer: "Tomiseomi"
         },
         {
             question: "Món ăn đầu tiên mà anh và em đã cùng nhau ăn là gì?",
-            answer: "Trà sữa" // Hoặc bất cứ món gì bạn muốn
+            answer: "phở" // Hoặc bất cứ món gì bạn muốn
         },
         {
-            question: "Bộ phim đầu tiên chúng ta xem cùng nhau là gì?",
-            answer: "Your Name" // Thay bằng tên phim của bạn
+            question: "Anh thích em ở điểm nào nhất?",
+            answer: "điểm nào cũng thích" // Thay bằng tên phim của bạn
         }
     ];
     let currentQuestionIndex = 0;
@@ -108,20 +112,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const challengeData = [
         {
-            question: "Anh thường làm gì đầu tiên khi thức dậy mà em hay trêu chọc nhất?",
-            answer: "ngáp" // Hoặc "vươn vai", "mở mắt", "tìm điện thoại"... tùy theo bạn
+            question: "Chúng ta gặp nhau lần đầu vào tháng mấy?",
+            answer: "5"
         },
         {
-            question: "Biệt danh hài hước mà em đặt cho anh (mà anh giả vờ không biết) là gì?",
-            answer: "gấu mập" // Thay bằng biệt danh thật của bạn
+            question: "Biệt danh đáng yêu mà anh hay gọi em là gì?",
+            answer: "Tomiseomi"
         },
         {
-            question: "Nếu anh biến thành động vật, em nghĩ anh sẽ là con gì và tại sao?",
-            answer: "mèo lười" // Đây là câu hỏi mở, bạn có thể chấp nhận nhiều đáp án hoặc chỉ định một đáp án "đúng" hài hước
+            question: "Món ăn đầu tiên mà anh và em đã cùng nhau ăn là gì?",
+            answer: "phở" // Hoặc bất cứ món gì bạn muốn
         },
         {
-            question: "Điều điên rồ nhất anh từng làm để chọc cười em là gì?",
-            answer: "nhảy múa" // Hoặc một hành động cụ thể nào đó
+            question: "Sau khi ăn xong thì mình đi đâu nhỉ",
+            answer: "cà phê" // Thay bằng tên phim của bạn
+        },
+        {
+            question: "Họ và tên đầy đủ của anh",
+            answer: "Nguyễn Thành Trung" // Thay bằng tên phim của bạn
+        },
+        {
+            question: "Em nghĩ anh có yêu em không ?",
+            answer: "có" // Thay bằng tên phim của bạn
+        },
+        {
+            question: "Em nghĩ anh có muon lam nguoi yeu em không ?",
+            answer: "có" // Thay bằng tên phim của bạn
         }
         // Thêm nhiều câu hỏi hài hước khác ở đây!
     ];
@@ -163,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (currentChallengeIndex === 1 || currentChallengeIndex === 2 || currentChallengeIndex === 3) {
             // Đây là các câu hỏi bạn muốn chấp nhận mọi đáp án
-            challengeFeedback.textContent = "Chính xác! Em đúng là bậc thầy đoán ý anh! 😂"; 
+            challengeFeedback.textContent = "Chính xác!"; 
             challengeFeedback.classList.add('success');
             checkChallengeBtn.classList.add('hidden');
             if (currentChallengeIndex < challengeData.length - 1) {
@@ -178,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const correctAnswer = challengeData[currentChallengeIndex].answer.toLowerCase(); 
 
             if (userAnswer.includes(correctAnswer)) {
-                challengeFeedback.textContent = "Chính xác! Em đúng là bậc thầy đoán ý anh! 😂";
+                challengeFeedback.textContent = "Chính xác!";
                 challengeFeedback.classList.add('success');
                 checkChallengeBtn.classList.add('hidden');
                 if (currentChallengeIndex < challengeData.length - 1) {
